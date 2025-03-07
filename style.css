@@ -1,3 +1,12 @@
+:root {
+    --pale-green: #4f645f;
+    --dark-blue: #1c272f;
+    --light-blue: #bee8ee;
+    --gray-ghaleb: #bdc8be;
+    --light-pink: #fae4c7;
+    --dark-pink: #a16f49;
+}
+
 *,
 ::after,
 ::before {
@@ -8,54 +17,63 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+h1 {
+    margin-bottom: 30px;
+    animation: changeColor alternate linear 3s infinite;
+    color: var(--dark-blue);
+}
+
 .containerCard {
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 458px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #efefef;
+    background-color: var(--gray-ghaleb);
     border-radius: 3px;
 }
 
 .containerCard h2 {
-    height: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 20px;
+    color: var(--dark-blue);
 }
 
 .containerCard .image {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 60%;
+    margin-bottom: 20px;
 }
 
 .containerCard .image img {
-    width: 50%;
+    width: 300px;
+    height: 300px;
     border-radius: 3px;
+    padding-top: 20px;
 }
 
 hr {
     border: solid 1px;
-    color: rgb(76, 76, 76);
+    color: var(--light-blue);
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .containerCard .contant {
-    width: 100%;
-    height: 30%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
 }
 
 .containerCard .contant a {
@@ -64,9 +82,29 @@ hr {
 
 .containerCard .contant a i {
     font-size: 50px;
-    color: rgb(75, 75, 75);
+    color: var(--dark-blue);
 }
 
 .containerCard .contant a:hover i {
-    color: rgb(31, 51, 51);
+    color: var(--pale-green);
+}
+
+/* animation */
+
+@keyframes changeColor {
+    20% {
+        color: var(--gray-ghaleb);
+    }
+
+    40% {
+        color: var(--pale-green);
+    }
+
+    80% {
+        color: var(--light-blue);
+    }
+
+    100% {
+        color: var(--dark-blue);
+    }
 }
