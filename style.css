@@ -1,5 +1,72 @@
-* , ::after , ::before{
+*,
+::after,
+::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerCard {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefef;
+    border-radius: 3px;
+}
+
+.containerCard h2 {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.containerCard .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+}
+
+.containerCard .image img {
+    width: 50%;
+    border-radius: 3px;
+}
+
+hr {
+    border: solid 1px;
+    color: rgb(76, 76, 76);
+    width: 100%;
+}
+
+.containerCard .contant {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.containerCard .contant a {
+    text-decoration: none;
+}
+
+.containerCard .contant a i {
+    font-size: 50px;
+    color: rgb(75, 75, 75);
+}
+
+.containerCard .contant a:hover i {
+    color: rgb(31, 51, 51);
 }
